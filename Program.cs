@@ -10,7 +10,13 @@ namespace CheckCheck
         static void Main(string[] args)
         {
             // Parse the arguments and compare file and hash using given algorithm.
-            Parser parser = new Parser(settings => settings.CaseInsensitiveEnumValues = true);
+            Parser parser = new Parser(settings =>
+            {
+                settings.AutoHelp = true;
+                settings.AutoVersion = true;
+                settings.CaseInsensitiveEnumValues = true;
+                settings.HelpWriter = Console.Out;
+            });
             ParserResult<Options> result = parser.ParseArguments<Options>(args);
             result.WithParsed<Options>(o => CompareHash(o.InputFile, o.Hash, o.Algorithm));
         }
