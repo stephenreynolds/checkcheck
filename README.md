@@ -1,9 +1,10 @@
 # CheckCheck
-Short for "Checksum Checker", this is a terminal tool for comparing files against a checksum to verify file integrity.
+Short for "Checksum Checker", this is a cross-platform terminal tool for comparing files against a checksum to verify file integrity.
 
 Supports MD5, SHA1, SHA256, SHA384, and SHA512.
 
 ## Prerequisites
+Requires .NET Core Runtime 2.2.1 (https://dotnet.microsoft.com/download/dotnet-core/2.2).
 
 ## Compiling
 From the .NET Core CLI, run `dotnet build` to compile and `dotnet run` to run.
@@ -23,7 +24,7 @@ Run `./checkcheck --help` for usage info:
 --help            Display this help screen.
 --version         Display version information.
 ```
-Arguments are case-insensitive.
+Arguments are case-insensitive and order does not matter.
 
 ### Example
 `./checkcheck -f file.exe -h C3499C2729730A7F807EFB8676A92DCB6F8A3F8F -a sha1`
