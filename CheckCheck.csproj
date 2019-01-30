@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <Authors>Stephen Reynolds</Authors>
+    <Authors>Stephen Reynolds (https://github.com/stephenreynolds)</Authors>
     <AssemblyName>checkcheck</AssemblyName>
   </PropertyGroup>
 
